@@ -1,5 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+  --maincolor: rgb(72, 61, 85);
+  --seccolor: rgb(63, 53, 74);
+  --shadecolor: rgba(0, 0, 0, 0.15);
+
+  /* Blue shades */
+  --blue-1: rgb(173, 178, 242);
+  --blue-2: rgb(129, 135, 216);
+  --blue-3: rgb(95, 102, 197);
+  --blue-4: rgb(63, 71, 167);
+  --blue-5: rgb(41, 48, 141);
+
+  /* Red shades */
+  --red-1: rgb(242, 173, 173);
+  --red-2: rgb(215, 128, 128);
+  --red-3: rgb(195, 93, 93);
+  --red-4: rgb(163, 59, 59);
+  --red-5: rgb(137, 37, 37);
+
+  font-size: 20px;
+}
+
 /* App.css */
 .app-container {
+  font-family: "Josefin Sans", sans-serif;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -9,36 +34,94 @@
 .top-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: calc(2 * var(--header-height));
+  justify-content: center;
   width: 100%;
+  height: 65px;
   background-color: lightcoral;
+  background-color: var(--maincolor);
 }
 
 .top-header h1 {
   text-align: center;
   flex-grow: 1;
   margin: 0;
+  color: white;
+  transform: translateY(4px);
+  z-index: 5;
 }
 
-.left-box, .right-box {
-  flex: 1;
-  background-color: lightblue;
+.e-m-title {
+  padding-inline: 70px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.left-box {
+  height: 100%;
+  width: 100%;
+  background-color: var(--blue-5);
+}
+
+.left-curve {
+  height: 65px;
+  min-width: 70px;
+  fill: var(--blue-5);
+  filter: drop-shadow(10px 0px 0px var(--blue-4))
+          drop-shadow(15px 0px 0px var(--blue-3))
+          drop-shadow(20px 0px 0px var(--blue-2))
+          drop-shadow(30px 0px 0px var(--blue-1));
+
+}
+
+.right-box {
+  height: 100%;
+  width: 100%;
+  background-color: var(--red-5);
+}
+
+.right-curve {
+  height: 65px;
+  min-width: 70px;
+  fill: var(--red-5);
+  filter: drop-shadow(-10px 0px 0px var(--red-4))
+          drop-shadow(-15px 0px 0px var(--red-3))
+          drop-shadow(-20px 0px 0px var(--red-2))
+          drop-shadow(-30px 0px 0px var(--red-1));
 }
 
 .nav-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(2 * var(--sub-header-height));
-  background-color: lightgreen;
+  height: 30px;
+  background-color: var(--seccolor);
+  box-shadow: 0px 0px 15px 5px var(--shadecolor) inset;
 }
 
-.nav-header button {
+.nav-button {
   margin: 0 10px;
   height: 100%;
-  padding: 0 15px;
+  padding: 0 35px;
   font-size: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: transparent;
+  border: none;
+}
+
+.nav-button:hover {
+  box-shadow: inset 0px 0px 15px var(--shadecolor);
+}
+
+.nav-button p {
+  transform: translateY(2px);
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Column Layout */
@@ -53,15 +136,18 @@
 
 .left-column {
   flex: 0 0 20%;
-  background-color: lightyellow;
+  background-color: var(--seccolor);
 }
 
 .center-column {
-  flex: 0 0 60%;
-  background-color: lightgrey;
+  flex: 0 0 calc(60% - 50px);
+  padding-inline: 25px;
+  background-color: var(--maincolor);
+  box-shadow: 0px 0px 5px var(--shadecolor);
+  z-index: 5;
 }
 
 .right-column {
   flex: 0 0 20%;
-  background-color: lightpink;
+  background-color: var(--seccolor);
 }
