@@ -1,6 +1,6 @@
 // App.tsx
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
 import Maps from './pages/Maps';
 import Polls from './pages/Polls';
 import Graphs from './pages/Graphs';
@@ -32,21 +32,16 @@ const App: React.FC = () => {
           <Link to="/about"><div className='nav-button'><p>About</p></div></Link>
         </header>
 
-        {/* Three-Column Layout */}
-        <div className="columns">
-          <div className="column left-column"></div>
-          <main className="column center-column">
-            <Routes>
-              {/* Default route redirects to /maps */}
-              <Route path="/" element={<Navigate to="/maps" replace />} />
-              <Route path="/election-map-lol" element={<Navigate to="/maps" replace />} />
-              <Route path="/maps" element={<Maps />} />
-              <Route path="/polls" element={<Polls />} />
-              <Route path="/graphs" element={<Graphs />} />
-              <Route path="/about" element={<About />} />
-            </Routes>
-          </main>
-          <div className="column right-column"></div>
+         {/* Main Content */}
+         <div className="main-content">
+          <Routes>
+            <Route path="/" element={<Navigate to="/maps" replace />} />
+            <Route path="/election-map-lol" element={<Navigate to="/maps" replace />} />
+            <Route path="/maps" element={<Maps layoutClass="maps-columns" />} />
+            <Route path="/polls" element={<Polls layoutClass="two-column-layout" />} />
+            <Route path="/graphs" element={<Graphs layoutClass="two-column-layout" />} />
+            <Route path="/about" element={<About layoutClass="about-columns" />} />
+          </Routes>
         </div>
       </div>
     </Router>
