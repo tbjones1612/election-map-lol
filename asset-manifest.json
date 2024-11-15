@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/election-map-lol/static/css/main.db5c19c0.css",
-    "main.js": "/election-map-lol/static/js/main.eaa9e108.js",
+    "main.css": "/election-map-lol/static/css/main.d133d1b5.css",
+    "main.js": "/election-map-lol/static/js/main.f42a388b.js",
     "static/js/453.de8a6dd0.chunk.js": "/election-map-lol/static/js/453.de8a6dd0.chunk.js",
     "index.html": "/election-map-lol/index.html",
-    "main.db5c19c0.css.map": "/election-map-lol/static/css/main.db5c19c0.css.map",
-    "main.eaa9e108.js.map": "/election-map-lol/static/js/main.eaa9e108.js.map",
+    "main.d133d1b5.css.map": "/election-map-lol/static/css/main.d133d1b5.css.map",
+    "main.f42a388b.js.map": "/election-map-lol/static/js/main.f42a388b.js.map",
     "453.de8a6dd0.chunk.js.map": "/election-map-lol/static/js/453.de8a6dd0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db5c19c0.css",
-    "static/js/main.eaa9e108.js"
+    "static/css/main.d133d1b5.css",
+    "static/js/main.f42a388b.js"
   ]
 }
