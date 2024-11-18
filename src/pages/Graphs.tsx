@@ -1,5 +1,6 @@
 // pages/Graphs.tsx
 import React from 'react';
+import './pages.css'
 
 interface GraphsProps {
   layoutClass: string;
@@ -7,7 +8,7 @@ interface GraphsProps {
 
 const Graphs: React.FC<GraphsProps> = ({ layoutClass }) => (
   <div className={layoutClass}>
-    <div className="left-column"></div>
+    <div className="left-column stripe"></div>
     <main className="right-column">
       <h2>Graphs Page</h2>
     </main>

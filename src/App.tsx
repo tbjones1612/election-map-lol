@@ -12,14 +12,14 @@ const App: React.FC = () => {
     <Router>
       <div className="app-container">
         {/* Top Header */}
-        <header className="top-header">
+        <header className="top-header stripe">
           <div className="left-box"></div>
           <svg className='left-curve' xmlns="http://www.w3.org/2000/svg" viewBox="-2 0 13 12">
-            <path d="M -2 0 L 11 -0 C 10 -0 8 -0 7 4 L 6 8 C 5 12 3 12 2 12 L -2 12 L -2 0"/>
+            <path d="M -2 0 L 11 -0 C 10 -0 8 -0 7 4 L 6 8 C 5 12 3 12 2 12 L -2 12 L -2 0" />
           </svg>
           <div className="e-m-title"><h1>ElectionMap.lol</h1></div>
           <svg className='right-curve' xmlns="http://www.w3.org/2000/svg" viewBox="-11 -12 13 12">
-            <path d="M 2 0 L -11 0 C -10 0 -8 0 -7 -4 L -6 -8 C -5 -12 -3 -12 -2 -12 L 2 -12 L 2 0"/>
+            <path d="M 2 0 L -11 0 C -10 0 -8 0 -7 -4 L -6 -8 C -5 -12 -3 -12 -2 -12 L 2 -12 L 2 0" />
           </svg>
           <div className="right-box"></div>
         </header>
@@ -32,8 +32,8 @@ const App: React.FC = () => {
           <Link to="/about"><div className='nav-button'><p>About</p></div></Link>
         </header>
 
-         {/* Main Content */}
-         <div className="main-content">
+        {/* Main Content */}
+        <div className="main-content">
           <Routes>
             <Route path="/" element={<Navigate to="/maps" replace />} />
             <Route path="/election-map-lol" element={<Navigate to="/maps" replace />} />
