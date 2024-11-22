@@ -26,6 +26,71 @@
   margin: 0px;
 }
 
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-self: baseline;
+}
+
+.legacyButton {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-self: center;
+  padding-block: 20px;
+}
+
+.swapPage {
+  background-color: var(--main2tint);
+  border-radius: 15px 15px 0px 0px;
+  display: flex;
+  gap: 15px;
+  padding: 5px 15px 10px 15px;
+  width: 320px;
+  height: 40px;
+  position: fixed;
+  z-index: 1000;
+  left: calc(50% - 160px);
+  bottom: 0px;
+  justify-content: center;
+  opacity: 50%;
+  transition: 0.5s;
+}
+
+.exitLegacy:hover,
+.swapPage:hover {
+  opacity: 100%;
+  transition: 0.15s;
+}
+
+.exitLegacy {
+  background-color: var(--main2tint);
+  border-radius: 15px 0px 0px 0px;
+  display: flex;
+  gap: 15px;
+  padding: 5px 5px 10px 15px;
+  width: 150px;
+  height: 40px;
+  position: fixed;
+  z-index: 1000;
+  right: 0px;
+  bottom: 0px;
+  justify-content: center;
+  opacity: 50%;
+  transition: 0.5s;
+}
+
+.legacyPortal {
+  transform: translateY(-130px);
+  width: 100%;
+  height: 100vh;
+  border: 0;
+  position: absolute;
+  z-index: 500;
+}
+
 /* Maps layout */
 .results {
   width: 100%;
@@ -130,6 +195,8 @@
   background-color: var(--maincolor);
   padding: 20px;
   box-shadow: 0px 0px 5px var(--main2tint);
+  overflow-y: scroll;
+  height: calc(100vh - 170px);
 }
 
 .about-columns .right-column {

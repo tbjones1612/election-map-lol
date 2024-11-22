@@ -33,6 +33,11 @@ const Maps: React.FC<MapsProps> = ({ layoutClass }) => (
       <div className="menu-panel">
         <WinCall />
       </div>
+      <div className="inset-panel">
+        <p>React remodel in development.</p>
+        <hr />
+        <p>Legacy site available through About page!</p>
+      </div>
     </div>
   </div>
 );

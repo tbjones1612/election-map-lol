@@ -5,6 +5,7 @@ import Maps from './pages/Maps';
 import Polls from './pages/Polls';
 import Graphs from './pages/Graphs';
 import About from './pages/About';
+import Legacy from './pages/Legacy';
 import './App.css';
 
 const App: React.FC = () => {
@@ -41,6 +42,7 @@ const App: React.FC = () => {
             <Route path="/polls" element={<Polls layoutClass="two-column-layout" />} />
             <Route path="/graphs" element={<Graphs layoutClass="two-column-layout" />} />
             <Route path="/about" element={<About layoutClass="about-columns" />} />
+            <Route path="/legacy" element={<Legacy />} />
           </Routes>
         </div>
       </div>
